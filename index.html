@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Decodificador de Texto</title>
+    <title>Text Decoder</title>
 </head>
 <body>
-    <header>
-        <img class="logo" src="./assets/logo-page.png" alt="">
-    </header>
-
     <main>
-        <section>
-            <textarea class="text__area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
-    
-            <div class="Information">
-                <h6>Apenas letras minúsculas e sem acento</h6>
-            </div>
-    
-            <div class="buttons">
-                <button class="buttons__encrypt">Encriptografar</button>
-                <button class="buttons__decrypt">Descriptografar</button>
+        <section class="text__and__buttons">
+            <textarea class="text__area" cols="41" rows="4" placeholder="Type your text here..."></textarea>
+            <div class="information">
+                <img src="./assets/exclamation-circle.png" alt="">
+                <h6>Lowercase letters only and no accent marks.</h6>
             </div>
 
+            <div class="buttons">
+                <button class="buttons__ecrypt">Encrypt</button>
+                <button class="buttons__decrypt"> Decrypt</button>
+            </div>
         </section>
-            <textarea class="message" cols="20" rows="10"></textarea>
+
         <section>
-            <textarea class="copy" cols="20" rows="10"></textarea>
-            <button class="button__copy">Copiar</button>
-        </section>    
+            <div class="message">
+                <div class="message__content">
+                    <img src="./assets/image-message.png" height="250px" width="250px alt="">
+                    <h1>No messages found</h1>
+                    <h3>Enter a text that you want to encrypt or decrypt.</h3>
+                </div>
+            </div>
+        </section>
+        
     </main>
     
 </body>
