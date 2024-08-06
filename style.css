@@ -89,6 +89,7 @@ main {
 .buttons {
     display: flex;
     gap: 30px;
+    margin-top: 18px;
 }
 
 .buttons__ecrypt {
@@ -157,9 +158,4 @@ main {
 .message h3{
     font-size: 14px;
     font-weight: 300;
-}
-
-.buttons {
-    display: flex;
-    margin-top: 18px;
 }
