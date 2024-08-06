@@ -10,11 +10,14 @@
 }
 
 * {
-    background: var(--first-color);
     font-family: var(--font);
     font-weight: 400;
-    font-size: 16px; /* Tamanho de fonte mais adequado */
+    font-size: 16px; 
     line-height: 150%;
+}
+
+body{
+    background: var(--first-color);
 }
 
 .logo {
@@ -30,17 +33,11 @@
 main {
     display: flex;
     margin-bottom: 4px;
-    margin-left: 200px; /* Aumente o valor para mais espaço à esquerda */
+    margin-left: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
     gap: 70px;
 }
-
-
-/* .content{
-    display: flex;
-
-} */
 
 .text__and__buttons{
     margin-left: 100px;
@@ -53,8 +50,11 @@ main {
     padding-top: 25px;
     text-transform: lowercase;
     font-size: 32px;
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura */
-    resize: none; /* Remove a capacidade de redimensionar */
+    box-sizing: border-box;
+    resize: none; 
+    width: 600px;
+    height: 265px;
+    background: var(--first-color);
 }
 
 .text__area:focus {
@@ -67,32 +67,31 @@ main {
 }
 
 .information {
-    display: flex; /* Ativa o layout flexível */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    gap: 6px; /* Define o espaço entre os itens */
+    display: flex;
+    align-items: center; 
+    gap: 6px; 
     margin-bottom: 5px;
     margin-top: 80px;
 }
 
 .information img {
-    width: 10px; /* Ajuste a largura da imagem conforme necessário */
-    height: 10px; /* Ajuste a altura da imagem conforme necessário */
+    width: 10px; 
+    height: 10px; 
 }
 
 .information h6 {
-    margin: 0; /* Remove margens padrão do título para alinhamento preciso */
-    font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
-    font-weight: 200; /* Ajuste o peso da fonte conforme necessário */
-    color: var(--fourth-color); /* Ajuste a cor do texto conforme necessário */
+    margin: 0; 
+    font-size: 12px; 
+    font-weight: 200; 
+    color: var(--fourth-color); 
 }
 
-
-.buttons{
+.buttons {
     display: flex;
     gap: 30px;
 }
 
-.buttons__ecrypt{
+.buttons__ecrypt {
     border: none;
     border-radius: 24px;
     background-color: var(--second-color);
@@ -102,7 +101,7 @@ main {
     text-align: center;
 }
 
-.buttons__decrypt{
+.buttons__decrypt {
     border: none;
     border-radius: 24px;
     background-color: var(--second-color);
@@ -114,33 +113,51 @@ main {
 
 .message {
     border: none;
-    background: rgba(240, 248, 255, 0.463); /* Mesma cor da borda */
-    border-radius: 20px;
+    border-radius: 24px;
+    background: var(--third-color); 
     position: fixed;
     overflow: auto;
     margin-left: 0px;
-    
 
     padding-left: 10px;
     padding-right: 10px;
     width: 300px;
     height: 580px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .message__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 
 .message h1,
 .message h3, .message img {
-    background-color: rgba(240, 248, 255, 0.463); /* Mesma cor da borda */
     margin: 0;
     text-align: center;
 }
 
+.message img {
+    height: 250px; 
+    width: auto;
+}
 
+.message h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.message h3{
+    font-size: 14px;
+    font-weight: 300;
+}
 
 .buttons {
     display: flex;
