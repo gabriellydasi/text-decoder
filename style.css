@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --first-color: #F1C584;
-    --second-color: #c27415;
+    --first-color: #efc382;
+    --second-color: #dd8b26;
     --third-color: #ffffff6b;
     --fourth-color: #2b2a2a;
     --fifth-color: #d5a762;
-    --font: 'JetBrains Mono', monospace;
+    --font: 'Poppins', sans-serif;
 }
 
 * {
@@ -29,11 +29,10 @@ body{
     height: 50px;
 }
 
-
 main {
     display: flex;
     margin-bottom: 4px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-top: 50px;
     margin-bottom: 50px;
     gap: 70px;
@@ -43,7 +42,7 @@ main {
     margin-left: 100px;
 }
 
-.text__area {
+#text__area {
     border: none;
     color: var(--second-color);
     margin-bottom: 90px;
@@ -57,12 +56,12 @@ main {
     background: var(--first-color);
 }
 
-.text__area:focus {
+#text__area:focus {
     outline: none;
 }
 
 ::placeholder {
-    color: #9a5c10a0;
+    color: #dd8b2674;
     font-size: 32px;
 }
 
@@ -86,52 +85,71 @@ main {
     color: var(--fourth-color); 
 }
 
+.buttons button {
+    font-size: 16px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--second-color);
+    color: rgba(255, 255, 255, 0.822);
+    width: 300px;
+    height: 67px;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.buttons__encrypt, .buttons__decrypt {
+    transition: all 0.5s;
+}
+
+.buttons__encrypt:hover{
+    background-color: #fcae1d;
+}
+
+.buttons__decrypt:hover{
+    background-color: #fcae1d;
+}
+
 .buttons {
     display: flex;
     gap: 30px;
     margin-top: 18px;
 }
 
-.buttons__ecrypt {
-    border: none;
+.buttons__copy {
+    border: 1px solid var(--second-color);
     border-radius: 24px;
-    background-color: var(--second-color);
-    color: white;
-    width: 300px;
+    background-color: transparent;
+    color: var(--second-color);
+    width: 280px;
     height: 67px;
-    text-align: center;
-}
+    margin-top: 68px;
 
-.buttons__decrypt {
-    border: none;
-    border-radius: 24px;
-    background-color: var(--second-color);
-    color: white;
-    width: 300px;
-    height: 67px;
     text-align: center;
+    cursor: pointer;
 }
 
 .message {
     border: none;
     border-radius: 24px;
     background: var(--third-color); 
-    position: fixed;
+    position: relative;
     overflow: auto;
     margin-left: 0px;
-
     padding-left: 10px;
     padding-right: 10px;
     width: 300px;
     height: 580px;
-
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px rgba(226, 132, 55, 0.488); /* Adiciona sombra */
 }
 
-.message__content {
+
+#message__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,7 +157,8 @@ main {
 }
 
 .message h1,
-.message h3, .message img {
+.message h3,
+.message img {
     margin: 0;
     text-align: center;
 }
@@ -147,15 +166,51 @@ main {
 .message img {
     height: 250px; 
     width: auto;
+    animation: slideDownUp 3s ease-in-out infinite; /* Animação de 3 segundos, repetida indefinidamente */
 }
 
-.message h1{
-    font-size: 20px;
+.message h1 {
+    font-size: 18px;
     font-weight: 600;
     color: var(--second-color);
 }
 
-.message h3{
+.message h3 {
     font-size: 14px;
     font-weight: 300;
+    color: var(--fourth-color);
+}
+
+#text__output {
+    border: none;
+    color: var(--second-color);
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 300px;
+}
+
+#text__output:focus {
+    outline: none;
+}
+
+/* Oculta o botão "Copy" e a mensagem criptografada por padrão */
+.hidden {
+    display: none;
+}
+
+@keyframes slideDownUp {
+    0% {
+        transform: translateY(-7px); /* Início acima do elemento */
+    }
+    50% {
+        transform: translateY(0px); /* Ponto mais baixo */
+    }
+    100% {
+        transform: translateY(-7px); /* Volta ao ponto inicial */
+    }
 }
