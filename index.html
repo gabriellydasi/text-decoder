@@ -10,29 +10,28 @@
 <body>
     <main>
         <section class="text__and__buttons">
-            <textarea class="text__area" cols="41" rows="4" placeholder="Type your text here..."></textarea>
+            <textarea id="text__area" cols="41" rows="4" placeholder="Type here..."></textarea>
             <div class="information">
                 <img src="./assets/exclamation-circle.png" alt="">
-                <h6>Lowercase letters only and no accent marks.</h6>
+                <h6>Lowercase letters only and no diacritics.</h6>
             </div>
 
             <div class="buttons">
-                <button class="buttons__ecrypt">Encrypt</button>
-                <button class="buttons__decrypt"> Decrypt</button>
+                <button onclick="encrypt()" class="buttons__encrypt">Encrypt</button>
+                <button onclick="decrypt()" class="buttons__decrypt">Decrypt</button>
             </div>
         </section>
 
-        <section>
+        <section class="box-result">
             <div class="message">
-                <div class="message__content">
+                <div id="message__content">
                     <img src="./assets/rabbit-daisy.png" alt="">
                     <h1>No messages found</h1>
                     <h3>Enter a text that you want to encrypt or decrypt.</h3>
                 </div>
             </div>
         </section>
-        
     </main>
-    
+    <script src="script.js"></script>
 </body>
 </html>
