@@ -1,5 +1,14 @@
 let textInput = document.querySelector('#text__area');
 let textOutput = document.querySelector('#message__content');
+const textArea = document.getElementById("text__area");
+
+textArea.addEventListener('input', function() {
+    textArea.value = removeAccents(textArea.value);
+});
+
+function removeAccents(text) {
+    return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 
 function encrypt() {
     let text = textInput.value.trim();
