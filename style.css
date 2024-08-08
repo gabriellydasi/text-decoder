@@ -12,7 +12,7 @@
 * {
     font-family: var(--font);
     font-weight: 400;
-    font-size: 16px; 
+    font-size: 1rem; 
     line-height: 150%;
     margin: 0;
     padding: 0;
@@ -27,8 +27,8 @@ body{
 
 header {
     position: relative; /* Permite usar transform sem afetar o layout do restante */
-    top: 10px; /* Ajusta a distância do topo */
-    transform: translateX(10px); /* Inclina o cabeçalho para a direita */
+    top: 0.625rem; /* Ajusta a distância do topo */
+    transform: translateX(0.625rem); /* Inclina o cabeçalho para a direita */
 }
 
 html, body {
@@ -40,47 +40,44 @@ html, body {
     flex: 1;
 }
 
-
 main {
     display: flex;
-    margin: 50px auto; /* Margem superior e inferior de 50px, margem esquerda e direita automática para centralizar */
-    margin-top: 10px; /* Margem superior reduzida para 10px */
-    margin-bottom: 10px; /* Margem inferior reduzida para 10px */
-    margin-left: 20px; /* Ajusta a margem esquerda para 20px */
-    margin-right: 20px; /* Ajusta a margem direita para 20px */
-    max-width: 1200px;
-    max-height: 733px;
-    gap: 60px;
+    margin: 3.125rem auto; /* Margem superior e inferior de3.125rem, margem esquerda e direita automática para centralizar */
+    margin-top: 0.625rem; /* Margem superior reduzida para 10px */
+    margin-bottom: 0.625rem; /* Margem inferior reduzida para 10px */
+    margin-left: 1.25rem; /* Ajusta a margem esquerda para 20px */
+    margin-right: 1.25rem; /* Ajusta a margem direita para 20px */
+    max-width: 75rem;
+    max-height: 45.813rem;
+    gap: 3.75rem;
 
 }
 
 header .logo {
-    margin-left: 60px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 50px;
-    height: 50px;
+    margin-left: 3.75rem;
+    padding-right: 0.625rem;
+    padding-top: 0.313rem;
+    padding-bottom: 0.313rem;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 
-
-
 .text__and__buttons{
-    margin-left: 60px;
+    margin-left: 3.75rem;
 }
 
 #text__area {
     border: none;
     color: var(--second-color);
-    margin-top: 30px;
-    margin-bottom: 90px;
-    padding-top: 5px;
+    margin-top: 1.875rem;
+    margin-bottom: 5.625rem;
+    padding-top: 0.313rem;
     text-transform: lowercase;
-    font-size: 32px;
+    font-size: 2rem;
     box-sizing: border-box;
     resize: none; 
-    width: 600px;
-    height: 265px;
+    width: 37.5rem;
+    height: 16.563rem;
     background: var(--first-color);
 }
 
@@ -90,37 +87,37 @@ header .logo {
 
 ::placeholder {
     color: #dd8b2674;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .information {
     display: flex;
     align-items: center; 
-    gap: 5px; 
-    margin-bottom: 5px;
-    margin-top: 50px;
+    gap: 0.313rem; 
+    margin-bottom: 0.313rem;
+    margin-top: 3.125rem;
 }
 
 .information img {
-    width: 14px; 
-    height: 14px; 
+    width: 0.875rem; 
+    height: 0.875rem; 
 }
 
 .information h6 {
     margin: 0; 
-    font-size: 14px; 
+    font-size: 0.875rem; 
     font-weight: 200; 
     color: var(--fourth-color); 
 }
 
 .buttons button {
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     background-color: var(--second-color);
     color: rgba(255, 255, 255, 0.822);
-    width: 300px;
-    height: 67px;
+    width: 18.75rem;
+    height: 4.188rem;
     text-align: center;
     cursor: pointer;
     padding-left: 5%;
@@ -133,34 +130,34 @@ header .logo {
 
 .buttons {
     display: flex;
-    gap: 30px;
-    margin-top: 18px;
+    gap: 1.875rem;
+    margin-top: 1.125rem;
 }
 
 .buttons__copy {
-    border: 1px solid var(--second-color);
-    border-radius: 24px;
+    border: 0.063rem solid var(--second-color);
+    border-radius: 1.5rem;
     background-color: transparent;
     color: var(--second-color);
-    width: 450px;
-    height: 57px;
-    margin-top: 45px;
+    width: 28.125rem;
+    height: 3.563rem;
+    margin-top: 2.813rem;
     text-align: center;
     cursor: pointer;
 }
 
 .alert {
     position: fixed;
-    top: 480px; /* Distância do topo da tela */
+    top: 30rem; /* Distância do topo da tela */
     left: 73.6%;
     transform: translateX(-50%); /* Centraliza horizontalmente */
-    background-color: #fcae1d; /* Cor de fundo verde */
+    background-color: #fcae1d; 
     color: rgba(255, 255, 255, 0.822);
-    padding: 15px;
-    border-radius: 24px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    height: 20px;
-    font-size: 14px;
+    padding: 0.938rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    height: 1.25rem;
+    font-size: 0.875rem;
     z-index: 1000;
     display: none; /* Inicialmente escondido */
 }
@@ -171,28 +168,27 @@ header .logo {
 
 .message {
     border: none;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     background: var(--third-color); 
     position: relative;
     overflow: auto;
-    margin-left: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 490px;
-    height: 547px;
+    margin-left: 0rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    width: 30.625rem;
+    height: 34.188rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 }
-
 
 #message__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 0.188rem;
 }
 
 .message h1,
@@ -203,19 +199,19 @@ header .logo {
 }
 
 .message img {
-    height: 250px; 
+    height: 15.625rem; 
     width: auto;
     animation: slideDownUp 3s ease-in-out infinite; /* Animação de 3 segundos, repetida indefinidamente */
 }
 
 .message h1 {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 600;
     color: var(--second-color);
 }
 
 .message h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
     color: var(--fourth-color);
 }
@@ -223,15 +219,15 @@ header .logo {
 #text__output {
     border: none;
     color: var(--second-color);
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 100%;
     height: auto;
     background: transparent;
     resize: none;
-    padding: 10px;
+    padding: 0.625rem;
     box-sizing: border-box;
-    margin-bottom: 300px;
-    margin-right: 20px;
+    margin-bottom: 18.75rem;
+    margin-right: 1.25rem;
 }
 
 #text__output:focus {
@@ -250,13 +246,13 @@ header .logo {
     flex-direction: row;
     color: var(--primary-color);
     background-color: var(--tertiary-color);
-    padding-top: 55px;
-    padding-bottom: 20px;
+    padding-top: 3.438rem;
+    padding-bottom: 1.25rem;
     text-align: center;
     font-family: var(--secondary-font);
     font-size: 1.25rem;
     font-weight: 400;
-    gap: 2px;;
+    gap: 0.125rem;
 }
 
 .footer p{
@@ -273,7 +269,7 @@ header .logo {
 }
 
 .footer__github__nick {
-    line-height: 1.25; /* Ajuste conforme necessário */
+    line-height: 1.25; 
     font-weight: 600;
     transition: 0.5s all;
 }
@@ -284,13 +280,13 @@ header .logo {
 
 @keyframes slideDownUp {
     0% {
-        transform: translateY(-7px); /* Início acima do elemento */
+        transform: translateY(-0.438rem); /* Início acima do elemento */
     }
     50% {
-        transform: translateY(0px); /* Ponto mais baixo */
+        transform: translateY(0rem); /* Ponto mais baixo */
     }
     100% {
-        transform: translateY(-7px); /* Volta ao ponto inicial */
+        transform: translateY(-0.438rem); /* Volta ao ponto inicial */
     }
 }
 
