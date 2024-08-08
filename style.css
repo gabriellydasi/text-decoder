@@ -14,39 +14,67 @@
     font-weight: 400;
     font-size: 16px; 
     line-height: 150%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     background: var(--first-color);
+    display: flex;
+    flex-direction: column;
 }
 
-.logo {
-    margin-left: 10px;
+header {
+    position: relative; /* Permite usar transform sem afetar o layout do restante */
+    top: 10px; /* Ajusta a distância do topo */
+    transform: translateX(10px); /* Inclina o cabeçalho para a direita */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    flex: 1;
+}
+
+
+main {
+    display: flex;
+    margin: 50px auto; /* Margem superior e inferior de 50px, margem esquerda e direita automática para centralizar */
+    margin-top: 10px; /* Margem superior reduzida para 10px */
+    margin-bottom: 10px; /* Margem inferior reduzida para 10px */
+    margin-left: 20px; /* Ajusta a margem esquerda para 20px */
+    margin-right: 20px; /* Ajusta a margem direita para 20px */
+    max-width: 1200px;
+    max-height: 733px;
+    gap: 60px;
+
+}
+
+header .logo {
+    margin-left: 60px;
     padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 50px;
     height: 50px;
 }
 
-main {
-    display: flex;
-    margin-bottom: 4px;
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    gap: 70px;
-}
+
 
 .text__and__buttons{
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 #text__area {
     border: none;
     color: var(--second-color);
+    margin-top: 30px;
     margin-bottom: 90px;
-    padding-top: 25px;
+    padding-top: 5px;
     text-transform: lowercase;
     font-size: 32px;
     box-sizing: border-box;
@@ -68,19 +96,19 @@ main {
 .information {
     display: flex;
     align-items: center; 
-    gap: 6px; 
+    gap: 5px; 
     margin-bottom: 5px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .information img {
-    width: 10px; 
-    height: 10px; 
+    width: 14px; 
+    height: 14px; 
 }
 
 .information h6 {
     margin: 0; 
-    font-size: 12px; 
+    font-size: 14px; 
     font-weight: 200; 
     color: var(--fourth-color); 
 }
@@ -103,14 +131,6 @@ main {
     transition: all 0.5s;
 }
 
-.buttons__encrypt:hover{
-    background-color: #fcae1d;
-}
-
-.buttons__decrypt:hover{
-    background-color: #fcae1d;
-}
-
 .buttons {
     display: flex;
     gap: 30px;
@@ -122,13 +142,32 @@ main {
     border-radius: 24px;
     background-color: transparent;
     color: var(--second-color);
-    width: 280px;
-    height: 67px;
-    margin-top: 68px;
-
+    width: 450px;
+    height: 57px;
+    margin-top: 45px;
     text-align: center;
     cursor: pointer;
 }
+
+.alert {
+    position: fixed;
+    top: 480px; /* Distância do topo da tela */
+    left: 73.6%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: #fcae1d; /* Cor de fundo verde */
+    color: rgba(255, 255, 255, 0.822);
+    padding: 15px;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 20px;
+    font-size: 14px;
+    z-index: 1000;
+    display: none; /* Inicialmente escondido */
+}
+
+/* .box__result{
+    margin: 0px auto;
+} */
 
 .message {
     border: none;
@@ -139,13 +178,13 @@ main {
     margin-left: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 300px;
-    height: 580px;
+    width: 490px;
+    height: 547px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(226, 132, 55, 0.488); /* Adiciona sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -153,7 +192,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
 }
 
 .message h1,
@@ -170,13 +209,13 @@ main {
 }
 
 .message h1 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--second-color);
 }
 
 .message h3 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--fourth-color);
 }
@@ -192,6 +231,7 @@ main {
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 300px;
+    margin-right: 20px;
 }
 
 #text__output:focus {
@@ -201,6 +241,45 @@ main {
 /* Oculta o botão "Copy" e a mensagem criptografada por padrão */
 .hidden {
     display: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    padding-top: 55px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    font-weight: 400;
+    gap: 2px;;
+}
+
+.footer p{
+    font-weight: 300; 
+    color: var(--fourth-color); 
+}
+.footer__github {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.footer__image {
+    width: 1.5rem; 
+}
+
+.footer__github__nick {
+    line-height: 1.25; /* Ajuste conforme necessário */
+    font-weight: 600;
+    transition: 0.5s all;
+}
+
+.footer__github__nick:hover {
+    font-size: 1.1rem;
 }
 
 @keyframes slideDownUp {
@@ -214,3 +293,4 @@ main {
         transform: translateY(-7px); /* Volta ao ponto inicial */
     }
 }
+
