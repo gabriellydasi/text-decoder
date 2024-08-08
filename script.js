@@ -62,7 +62,23 @@ function copy() {
     textCopy.select();
     document.execCommand('copy');
 
-    alert('Text copied!');
+    // Cria o elemento de alerta
+    let alertDiv = document.createElement('div');
+    alertDiv.className = 'alert'; // Adiciona a classe de estilo
+    alertDiv.textContent = 'Text copied!';
+
+    // Adiciona o alerta ao body
+    document.body.appendChild(alertDiv);
+
+    // Mostra o alerta
+    alertDiv.style.display = 'block';
+
+    // Esconde o alerta após 2 segundos (2000 milissegundos)
+    setTimeout(() => {
+        alertDiv.style.display = 'none';
+        // Remove o alerta do DOM
+        document.body.removeChild(alertDiv);
+    }, 2000);
 }
 
 function resetContent() {
