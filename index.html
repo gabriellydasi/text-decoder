@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/icon-daisy.png" type="image/x-icon">
     <title>Text Decoder</title>
 </head>
 <body>
+    <header>
+        <img class="logo" src="./assets/icon-daisy.png" alt="">
+    </header>
     <main>
         <section class="text__and__buttons">
             <textarea id="text__area" cols="41" rows="4" placeholder="Type here..."></textarea>
@@ -22,16 +26,25 @@
             </div>
         </section>
 
-        <section class="box-result">
+        <section class="box__result">
             <div class="message">
                 <div id="message__content">
                     <img src="./assets/rabbit-daisy.png" alt="">
-                    <h1>No messages found</h1>
-                    <h3>Enter a text that you want to encrypt or decrypt.</h3>
+                    <div class="message__text">
+                        <h1>No messages found</h1>
+                        <h3>Enter a text that you want to encrypt or decrypt.</h3>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <p>Developed by</p>
+        <img src="./assets/icon-github.svg" class="footer__image" alt="GitHub icon">
+        <a class="footer__github" href="https://github.com/gabriellydasi">
+            <b class="footer__github__nick">/gabriellydasi</b>
+        </a>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
