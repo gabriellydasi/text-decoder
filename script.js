@@ -6,27 +6,18 @@ textArea.addEventListener('input', function() {
     textArea.value = removeSpecialCharacters(removeAccents(textArea.value));
 }); 
 
-textArea.addEventListener('input', function() {
-    textArea.value = removeNumbers(removeSpecialCharacters(textArea.value));
-});
-
 function removeAccents(text) {
     return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
 function removeSpecialCharacters(text) {
-    return text.replace(/[¹²³!@#$%^&*()_+={}\[\]|\\:;"'¨¬¢£<>,.?/~`]/g, '');
+    return text.replace(/[^a-zA-Z0-9 ]/g, ''); // mantém letras, números e espaços
 }
-
-function removeNumbers(text) {
-    return text.replace(/\d/g, '');
-}
-
 
 function encrypt() {
     let text = textInput.value.trim();
     if (text === '') {
-        resetContent();
+        alert01();
         return;
     }
 
@@ -43,7 +34,7 @@ function encrypt() {
 function decrypt() {
     let text = textInput.value.trim();
     if (text === '') {
-        resetContent();
+        alert02();
         return;
     }
 
@@ -61,30 +52,20 @@ function copy() {
     let textCopy = document.getElementById('text__output');
     textCopy.select();
     document.execCommand('copy');
-
-    // Cria o elemento de alerta
-    let alertDiv = document.createElement('div');
-    alertDiv.className = 'alert'; // Adiciona a classe de estilo
-    alertDiv.textContent = 'Text copied!';
-
-    // Adiciona o alerta ao body
-    document.body.appendChild(alertDiv);
-
-    // Mostra o alerta
-    alertDiv.style.display = 'block';
-
-    // Esconde o alerta após 2 segundos (2000 milissegundos)
-    setTimeout(() => {
-        alertDiv.style.display = 'none';
-        // Remove o alerta do DOM
-        document.body.removeChild(alertDiv);
-    }, 2000);
 }
 
 function resetContent() {
     textOutput.innerHTML = '<img src="./assets/rabbit-daisy.png" alt="">' +
                            '<h1>No messages found</h1>' +
                            '<h3>Enter a text that you want to encrypt or decrypt.</h3>';
+}
+
+function alert01(){
+    alert('Please, enter a message that you want to encrypt first.');
+}
+
+function alert02(){
+    alert('Please, enter a message that you want to decrypt first.');
 }
 
 resetContent();
