@@ -4,32 +4,38 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="shortcut icon" href="./assets/icon-daisy.png" type="image/x-icon">
     <title>Text Decoder</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="./assets/icon-daisy.png" alt="">
+        <img class="logo" src="./assets/icon-daisy.png" alt="A stylized daisy, with white petals and a yellow center. The petals are long and slender, radiating from the center in a symmetrical pattern. The center of the flower is rounded and textured, presenting an intense yellow tone. The edges of the petals are slightly rounded, and there is a thin contour line around the entire flower, giving it a drawing or illustration look.">
     </header>
+    
     <main>
         <section class="text__and__buttons">
-            <textarea id="text__area" cols="41" rows="4" placeholder="Type here..."></textarea>
-            <div class="information">
-                <img src="./assets/exclamation-circle.png" alt="">
-                <h6>Lowercase letters only and no diacritics.</h6>
+            <div>
+                <textarea id="text__area" cols="41" rows="4" placeholder="Type here..."></textarea>
             </div>
-
-            <div class="buttons">
-                <button onclick="encrypt()" class="buttons__encrypt">Encrypt</button>
-                <button onclick="decrypt()" class="buttons__decrypt">Decrypt</button>
+            <div class="information__and__buttons">
+                <div class="information">
+                    <img src="./assets/exclamation-circle.png" alt="Exclamation circle icon">
+                    <h6>Lowercase letters only and no special characters.</h6>
+                </div>
+    
+                <div class="buttons">
+                    <button onclick="encrypt()" class="buttons__encrypt">Encrypt</button>
+                    <button onclick="decrypt()" class="buttons__decrypt">Decrypt</button>
+                </div>
             </div>
         </section>
 
         <section class="box__result">
             <div class="message">
                 <div id="message__content">
-                    <img src="./assets/rabbit-daisy.png" alt="">
+                    <img src="./assets/rabbit-daisy.png" alt="Cute little rabbit with a beige body and rosy cheeks, holding a big daisy. The character has a kind of light brown mane or hair around his head, resembling a little lion. The daisy has white petals, a yellow center, and a large green leaf. The illustration has a childish and adorable style.">
                     <div class="message__text">
                         <h1>No messages found</h1>
                         <h3>Enter a text that you want to encrypt or decrypt.</h3>
@@ -38,6 +44,7 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <p>Developed by</p>
         <img src="./assets/icon-github.svg" class="footer__image" alt="GitHub icon">
@@ -45,6 +52,7 @@
             <b class="footer__github__nick">/gabriellydasi</b>
         </a>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
