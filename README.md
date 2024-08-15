@@ -62,7 +62,7 @@ O codificador de texto é projetado para trabalhar exclusivamente com letras min
 
 ## 📲 Acesso à Aplicação
 
-* Clique no seguinte link da aplicação para abrir a aplicação no seu navegador: 
+* Clique no seguinte link da aplicação para abrir a aplicação no seu navegador: <a href="https://text-decoder-psi.vercel.app/">Text Decoder</a>
 
 * Inserção de Texto: No campo de entrada, digite o texto que deseja criptografar ou descriptografar. Certifique-se de usar apenas letras minúsculas, números e espaços, pois caracteres especiais e acentos serão removidos automaticamente.
   
@@ -74,4 +74,15 @@ O codificador de texto é projetado para trabalhar exclusivamente com letras min
 
 * Verificação e Ajustes: Verifique o texto no campo de saída. Caso o texto não esteja no formato esperado, ajuste o texto no campo de entrada e repita o processo de criptografia ou descriptografia conforme necessário.
 
-## 🎞️ Demonstração
+## 🎞️ Imagens
+<img src="https://github.com/user-attachments/assets/373f56c9-c08e-46c0-bd9e-40bd054ce79e" width="500" height="300" alt="Image 1">
+<img src="https://github.com/user-attachments/assets/da00cc92-9065-4060-9af6-0c1fd89ca76e" width="500" height="300" alt="Image 2">
+<img src="https://github.com/user-attachments/assets/2e6452f0-8bb4-4a4d-b540-6e603079f519" width="500" height="500" alt="Image 3">
+<img src="https://github.com/user-attachments/assets/b592b1b2-d5c5-4133-9b25-b74cf0ac3c2b" width="500" height="500" alt="Image 4">
+
+
+
+
+
+
+
