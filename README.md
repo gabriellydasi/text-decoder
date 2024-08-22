@@ -1,4 +1,4 @@
-# Text Decoder Challenge - ONE | Alura
+# 🇬🇧 Text Decoder Challenge - ONE | Alura
 The project involves creating a text decoder, developed as part of a challenge from the Oracle Next Education program in collaboration with Alura. The project aims to create an application capable of encrypting and decrypting text messages, providing a practical opportunity to apply technical knowledge in a scenario close to a professional setting.
 
 ## ⚙ Features
@@ -79,7 +79,9 @@ The text encoder is designed to work exclusively with lowercase letters, numbers
 <img src="https://github.com/user-attachments/assets/373f56c9-c08e-46c0-bd9e-40bd054ce79e" width="45%" height="auto" alt="Image 1">
 <img src="https://github.com/user-attachments/assets/da00cc92-9065-4060-9af6-0c1fd89ca76e" width="45%" height="auto" alt="Image 2">
 
-# Challenge Decodificador de Texto - ONE | Alura
+<br>
+
+# 🇧🇷 Challenge Decodificador de Texto - ONE | Alura
 O projeto envolve a criação de um decodificador de texto,  desenvolvido como parte de um desafio do programa Oracle Next Education em colaboração com a Alura. O projeto visa criar uma aplicação capaz de criptografar e descriptografar mensagens de texto, oferecendo uma oportunidade prática para aplicar conhecimentos técnicos em uma situação próxima à realidade profissional.
 
 ## ⚙ Features
