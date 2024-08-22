@@ -1,3 +1,84 @@
+# Text Decoder Challenge - ONE | Alura
+The project involves creating a text decoder, developed as part of a challenge from the Oracle Next Education program in collaboration with Alura. The project aims to create an application capable of encrypting and decrypting text messages, providing a practical opportunity to apply technical knowledge in a scenario close to a professional setting.
+
+## ⚙ Features
+
+* Vowel Substitution Encryption
+
+  * The letter "e" is replaced by "enter"
+  * The letter "i" is replaced by "imes"
+  * The letter "a" is replaced by "ai"
+  * The letter "o" is replaced by "ober"
+  * The letter "u" is replaced by "ufat"
+
+* Special Character Conversion to Whitespace
+
+  * The typed text is normalized to decompose accented characters into their basic parts. Accents are then removed, transforming characters like "é" into "e". After removing accents, the text is processed again to eliminate all characters that are not letters (a-z, A-Z), numbers (0-9), or spaces. This includes punctuation, mathematical symbols, monetary symbols, and other special characters. The processed text, now free of accents and special characters, is updated in the text field, ensuring that the content is clean and as expected.
+
+  * Examples of special characters:
+    * Punctuation: !, @, #, $, %, ^, &, *, (, ), _, +, -, =, {, }, [, ], |, , :, ;, ", ', <, >, ,, ., ?, /
+    * Accents and diacritics: á, é, í, ó, ú, à, è, ì, ò, ù, â, ê, î, ô, û, ä, ë, ï, ö, ü, ã, ñ, õ, ç
+    * Mathematical symbols: +, -, =, *, /, %, √, ∞, ≈, ≠, ≤, ≥
+    * Monetary symbols: $, €, £, ¥, ¢, ₹
+    * Other symbols: ©, ®, ™, §, ¶
+
+* Uppercase to Lowercase Conversion
+
+  * Uppercase letters are converted to lowercase through CSS styling on the text field element. This is achieved using the text-transform: lowercase; property applied to the ID text__area, which is the field where the user types the text.
+
+* Functional Buttons
+  * <b>Encrypt</b>: Encrypts the text entered in the input field. After encryption, the text is transferred to the output field.
+  * <b>Decrypt</b>: Decrypts the text entered in the input field. After decryption, the text is transferred to the output field.
+  * <b>Copy</b>: Copies the content of the output field to the clipboard.
+
+* Input Validations
+  * <b>Button Deactivation</b>: The Encrypt and Decrypt buttons are disabled if the input field is empty or contains only whitespace.
+  * <b>Alert Display</b>: An alert is shown to the user when trying to activate the Encrypt or Decrypt buttons without providing valid text
+  
+## 🛠️ Tools Used
+* JavaScript: Used to implement the encryption and decryption logic, manipulating and validating the text entered by the user.
+
+* HTML: Structures the user interface, including the text input and output fields, as well as the action buttons.
+
+* CSS: Responsible for styling the application, ensuring a visually appealing and responsive interface.
+
+* Git: Used for version control, allowing tracking of project development and management of code changes.
+
+* Visual Studio Code: The chosen code editor for writing and debugging source code, leveraging features such as plugin extensions and Git integration.
+
+## 💡Functionality
+The text encoder is designed to work exclusively with lowercase letters, numbers, and spaces, excluding accents and special characters.
+
+* Input Filtering: The system allows only lowercase letters, numbers, and spaces. Any other characters, such as accents and special symbols, are automatically removed.
+
+* Accent Removal: When the text is typed, it is normalized to decompose accented characters. For example, "é" is transformed into "e" without an accent. Accents are then removed, resulting only in basic letters.
+
+* Special Character Removal: After removing accents, all characters that are not letters, numbers, or spaces are eliminated. This removes punctuation and disallowed symbols.
+
+* Text Field Update: The cleaned text, now free of accents and special characters, is displayed in the text field. Only lowercase letters, numbers, and spaces are allowed.
+
+* Encryption: After cleaning and normalizing the text, it is encrypted using a specific algorithm. The encrypted text is then displayed in the appropriate field. The encryption ensures that the original text is transformed into a secure and unreadable form.
+
+* Paste and Decrypt: Users can paste text into the field that has been previously encrypted. The system applies the same filtering rules to ensure the pasted text complies with the requirements, allowing correct decryption.
+
+## 📲 Application Access
+
+* Click the following link to open the application in your browser: <a href="https://text-decoder-psi.vercel.app/">Text Decoder</a>
+
+* Text Entry: In the input field, type the text you wish to encrypt or decrypt. Be sure to use only lowercase letters, numbers, and spaces, as special characters and accents will be automatically removed.
+
+* Encrypt Text: Click the Encrypt button. The entered text will be encrypted and the result will be displayed in the output field.
+
+* Decrypt Text: If you have an encrypted text, paste it into the input field and click the Decrypt button. The text will be decrypted and the result will be shown in the output field.
+
+* Copy Text: After encryption or decryption, click the Copy button to copy the text from the output field to the clipboard.
+
+* Verification and Adjustments: Check the text in the output field. If the text is not in the expected format, adjust the text in the input field and repeat the encryption or decryption process as needed.
+
+## 🎞️ Images
+<img src="https://github.com/user-attachments/assets/373f56c9-c08e-46c0-bd9e-40bd054ce79e" width="45%" height="auto" alt="Image 1">
+<img src="https://github.com/user-attachments/assets/da00cc92-9065-4060-9af6-0c1fd89ca76e" width="45%" height="auto" alt="Image 2">
+
 # Challenge Decodificador de Texto - ONE | Alura
 O projeto envolve a criação de um decodificador de texto,  desenvolvido como parte de um desafio do programa Oracle Next Education em colaboração com a Alura. O projeto visa criar uma aplicação capaz de criptografar e descriptografar mensagens de texto, oferecendo uma oportunidade prática para aplicar conhecimentos técnicos em uma situação próxima à realidade profissional.
 
@@ -75,14 +156,5 @@ O codificador de texto é projetado para trabalhar exclusivamente com letras min
 * Verificação e Ajustes: Verifique o texto no campo de saída. Caso o texto não esteja no formato esperado, ajuste o texto no campo de entrada e repita o processo de criptografia ou descriptografia conforme necessário.
 
 ## 🎞️ Imagens
-<img src="https://github.com/user-attachments/assets/373f56c9-c08e-46c0-bd9e-40bd054ce79e" width="500" height="300" alt="Image 1">
-<img src="https://github.com/user-attachments/assets/da00cc92-9065-4060-9af6-0c1fd89ca76e" width="500" height="300" alt="Image 2">
-<img src="https://github.com/user-attachments/assets/2e6452f0-8bb4-4a4d-b540-6e603079f519" width="500" height="500" alt="Image 3">
-<img src="https://github.com/user-attachments/assets/b592b1b2-d5c5-4133-9b25-b74cf0ac3c2b" width="500" height="500" alt="Image 4">
-
-
-
-
-
-
-
+<img src="https://github.com/user-attachments/assets/373f56c9-c08e-46c0-bd9e-40bd054ce79e" width="45%" height="auto" alt="Image 1">
+<img src="https://github.com/user-attachments/assets/da00cc92-9065-4060-9af6-0c1fd89ca76e" width="45%" height="auto" alt="Image 2">
